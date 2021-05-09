@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace Webgentle.Bookstore
 {
@@ -26,6 +28,8 @@ namespace Webgentle.Bookstore
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseStaticFiles();
  
              app.UseRouting();
 
