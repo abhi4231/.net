@@ -1,15 +1,19 @@
-﻿
-@{
-    Layout = null;
+﻿ 
+
+
+@section breadcrumb{
+    
+<nav area-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Page 1</a></li>
+        <li class="breadcrumb-item active" area-current="page">Index</li>
+    </ol>
+</nav>
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>AboutUS</title>
-</head>
-<body>
-</body>
-</html>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>About US </h1>
+    </div>
+</section>

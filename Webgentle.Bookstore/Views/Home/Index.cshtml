@@ -1,29 +1,62 @@
 ﻿
+@section breadcrumb{
+
+    <nav area-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Page 1</a></li>
+            <li class="breadcrumb-item active" area-current="page">Index</li>
+        </ol>
+    </nav>
+}
 @{
-    Layout = null;
+    var data = ViewBag.Data;
 }
 
-<!DOCTYPE html>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>Welcome To Smart Payroll </h1>
+        <p class="lead text-muted">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link href="~/css/site.css" rel="stylesheet" />
+             @TempData["CurrentUser"] 
+        </p>
+        <p>
+            <a href="#viewport" class="btn btn-primary my-4">Search Employees</a>
+        </p>
+    </div>
+</section>
+<div class="index-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="hero-text" style="padding: 100px 0 0 0;">
+                    <h1 class="animated fadeInLeft" style="font-size: 40px;text-shadow: 2px 2px #fff;padding: 15px;
+    ; margin-bottom:0px;color: #12132d;">
+                        Free HR & Payroll solutions for Small Businesses.
+                    </h1>
+                    <p class="animated fadeInLeft" style="padding: 15px;
+    color: #0f0f1f;font-size: 20px;">The simplest way to manage your payroll & HR.</p>
 
-    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <section id="home" class="no-spacing" style="height: 400px!important;
+							margin-top:50px;border-radius:5px;background-image:url('imgages/bghome.png')">
+                    <img src="~/images/bghome.png" width="740" height="370" />
+                   
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+ 
 
-</head>
-<body>
 
-<script src="~/lib/jquery/jquery.js"></script>
-<img src="~/images/download.png" class="logo" alt="logo" />
-<h1 class="h1">Welcome</h1>
-<input type="button" value="Click Me" class="btn btn-danger" />
-</body>
-</html>
-<script>
-    $(document).ready(function() {
-        alert("Page Loaded");
-    });
-</script>
+        @section scripts
+{
+            <script>
+                $(document).ready(function () {
+                    alert("Document is ready");
+                })
+            </script>
+        }

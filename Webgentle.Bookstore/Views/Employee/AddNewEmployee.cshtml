@@ -1,0 +1,134 @@
+﻿@model EmployeeModel
+@{
+    ViewData["Title"] = "Add New Employee";
+}
+
+<div class="container">
+    <h3 class="display-4">Add New Employee</h3>
+    <hr />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function () {
+                alert("EMPLOYEE ADDED SUCCESSFULLY....");
+            });
+        });
+    </script>
+    
+    <form method="post">
+        <div class="row mt-4">
+            <div class="col col-md-6">
+
+                <div class="form-group">
+                    <label asp-for="First_Name"></label>
+                    <input asp-for="First_Name" class="form-control" required />
+                    <span asp-validation-for="First_Name" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Last_Name"></label>
+                    <input asp-for="Last_Name" class="form-control" required />
+                    <span asp-validation-for="Last_Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Gender"></label>
+                    <select asp-for="Gender" class="form-control" required>
+                        <option value="">Please Choose Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" required />
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="DOB"></label>
+                    <input type="date" asp-for="DOB" class="form-control" required />
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Reports_To"></label>
+                    <input asp-for="Reports_To" class="form-control" required />
+
+                </div>
+
+                @* <div class="form-group">
+                        <label asp-for="Joining_Date"></label>
+                        <input asp-for="Joining_Date" class="form-control" />
+
+                    </div> *@
+
+            </div>
+            <div class="col col-md-6">
+                <div class="form-group">
+                    <label asp-for="Location"></label>
+                    <input asp-for="Location" class="form-control" required />
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Blood_Group"></label>
+                    <select asp-for="Blood_Group" class="form-control" required>
+                        <option value="">Please Choose Blood Group</option>
+                        <option>A+ve</option>
+                        <option>A-ve</option>
+                        <option>B+ve</option>
+                        <option>B-ve</option>
+                        <option>AB+ve</option>
+                        <option>AB-ve</option>
+                        <option>O+ve</option>
+                        <option>O-ve</option>
+                    </select>
+
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Designation"></label>
+                    <input asp-for="Designation" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="PAN"></label>
+                    <input asp-for="PAN" class="form-control" />
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Employee_Type"></label>
+                    <select asp-for="Employee_Type" class="form-control" required>
+                        <option value="">Please Choose Employee Type</option>
+
+                        <option>Full Time</option>
+                        <option>Part Time</option>
+                        <option>On Contract</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Department"></label>
+                    <input asp-for="Department" class="form-control" />
+
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="ProfileImage"></label>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label"></label>
+                        <input class="form-control" asp-for="ProfileImage" id="formFile">
+                    </div>
+
+                    <span asp-validation-for="ProfileImage" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add Employee" class="btn btn-primary" />
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+</div>
+ 
